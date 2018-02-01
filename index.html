@@ -60,7 +60,7 @@
                 $.ajax({    url : "http://linkin.it/Projects/CorsoPhonegap/CorsoPhonegapLogin.php",
 		                    cache : false,
 		                    dataType : "json",
-		                    data : { username : $("#matricola").val(), pwd: $("#password").val()},
+		                    data : { username : $("#matricola").val(), password: $("#password").val()},
 		                    success : function(data) { 
                                 
                                 if (data.auth == "OK") alert("SUCCESS: SEI AUTENTICATO");
