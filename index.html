@@ -56,15 +56,21 @@
                 console.log("Utente= "+$("#matricola").val() );
                 console.log("Password= "+$("#password").val() );
 
-                /*
-                $.ajax({    url : "chiamata a ws",
+                
+                $.ajax({    url : "http://linkin.it/Projects/CorsoPhonegap/CorsoPhonegapLogin.php",
 		                    cache : false,
 		                    dataType : "json",
-		                    data : { user : $("#matricola").val(), pwd: $("#password").val()},
-		                    success : function(data) { alert("SUCCESS"); },
+		                    data : { username : $("#matricola").val(), pwd: $("#password").val()},
+		                    success : function(data) { 
+                                
+                                if (data.auth == "OK") alert("SUCCESS: SEI AUTENTICATO");
+                                else alert("ERROR: Login/password errate.");
+                                
+                                
+                            },
                             error: function (request, status, error) { alert("ERROR"); }
                 });
-                */            
+                      
             
             } else {
                 alert("Inserire Login e Password.");
