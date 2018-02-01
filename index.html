@@ -47,6 +47,33 @@
           password.type="password";
       }
   }
+
+    $(document).ready(function() {
+        
+        $("#btn_login").click(function(){
+
+            if ($("#matricola").val() != "" && $("#password").val() != "") {
+                console.log("Utente= "+$("#matricola").val() );
+                console.log("Password= "+$("#password").val() );
+
+                /*
+                $.ajax({    url : "chiamata a ws",
+		                    cache : false,
+		                    dataType : "json",
+		                    data : { user : $("#matricola").val(), pwd: $("#password").val()},
+		                    success : function(data) { alert("SUCCESS"); },
+                            error: function (request, status, error) { alert("ERROR"); }
+                });
+                */            
+            
+            } else {
+                alert("Inserire Login e Password.");
+            }
+        });
+
+    });
+
+  
   </script>
 </body>
 </html>
